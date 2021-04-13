@@ -177,6 +177,8 @@ module.exports = {
   }
 };
 ```
+    - The `entry: './src/main.js',` line means _that_ JS file is the "entry point" to all your other files -- in other words, the place where `webpack` will begin its recursive search for other files to add to `bundle.js`
+    - You can change `bundle.js` will be placed in a `dist/` directory based on the `filename:` and `path:` lines
 
 
 </details>
