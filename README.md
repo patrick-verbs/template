@@ -103,7 +103,7 @@ repository-name/
   |
   ├── package.json  ᐸ─── holds a list of all our project's *dependencies* (i.e., packages we need) so we can easily auto-install them
   ├── package.lock.json  ᐸ─── auto-generated when we install our dependencies (see above) -- think of the "lock" as meaning "don't edit this!"
-  |                             "package.lock.json" file is basically just a *much* longer version of "package.json" (".lock" lists all the dependencies of our dependencies, and so on...)
+  |                             "package.lock.json" is basically just a *much* longer version of "package.json" (".lock" lists all the dependencies of our dependencies, and so on...)
   |
   |
   ├── webpack.config.js  ᐸ─── this is where we tell webpack how to process & bundle our source code.
@@ -126,6 +126,47 @@ repository-name/
 ```
 
 </details>
+
+
+---
+## Setup Steps
+
+<details><summary><em><strong>Setup from scratch</em></strong></summary>
+
+1. Name and create a new repository (`repository-name` will be the example in the code here)
+2. Make your `src/`, `src/css/`, and `__test__` directories: <br>`$ mkdir src 'src/css' '__test__' `
+3. Add your `README.md`, `index.html`, `main.js`, and `styles.css` files: <br>`$ touch README.md src/index.html src/main.js src/css/styles.css`
+4. Add your <em>non-</em>auto-generated configuration files: <br>`$ touch package.json webpack.config.js .gitignore`
+5. Fill in the starter code for `package.json`: <br>
+```
+{
+  "name": "repository-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
+6. Install `webpack` using Node Package Manager (npm)
+    - The "pinned" (recommended) version for Epicodus is v4.39.3:<br>`npm install webpack@4.39.3 --save-dev --save-exact`
+    - This adds `webpack` to your `package.json` file, so you won't have to!
+    - The `--save-dev` flag is important to ensure the __development__ version is installed
+    - The `--save-exact` flag ensures that the __exact__ version we specified is installed to our dependencies (in the `node_modules/` folder)
+7. Install `webpack-cli` (the __command line interface__ for webpack)<br>`$ npm install webpack-cli@3.3.8 --save-dev --save-exact`
+
+</details>
+
+<br>
+
+__To remove a dependency__:
+  1. First try deleting its line from `packages.json`, then running `$ npm prune` to prune away modules that aren't listed there
+  2. If that doesn't get the job done, trying deleting the line, then _deleting your `node_modules/` directory_, then rebuilding it with `$ npm install`
+
 
 
 ---
