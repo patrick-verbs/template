@@ -72,6 +72,7 @@
 repository-name/
   |   (NOTE: the below folder/file structure is *non*-alphabetized to illustrate the workflow)
   |
+  |
   ├── src/  ᐸ─── *all* of our development (human-readable!) files live here: JS, HTML, CSS...
   |     |
   |     ├── index.html
@@ -82,10 +83,12 @@ repository-name/
   |           └── styles.css
   |
   |
+  |
   ├── __tests__/  ᐸ─── all of the tests we write go in this directory (note the four "_" used in the name)
   |     |
   |     ├── circle.test.js  ᐸ───┐
   |     └── triangle.test.js  ᐸ─┴─ example tests (note both instances of the "." in each file name)
+  |
   |
   |
   ├── dist/  ᐸ─── our compiled *production* code (exclude this from GitHub repos, as the focus there should be on *development* code)
@@ -93,23 +96,30 @@ repository-name/
   |     └── bundle.js  ᐸ─── webpack generates this file for us -- this should contain everything from the "src/" directory, all bundled up!
   |
   |
+  |
   ├── node_modules/  ᐸ─── this directory stores all of our project's dependencies -- it is auto-generated, downloading everything for us based on package.lock.json (see below)
+  |
   |
   |
   ├── package.json  ᐸ─── holds a list of all our project's *dependencies* (i.e., packages we need) so we can easily auto-install them
   ├── package.lock.json  ᐸ─── auto-generated when we install our dependencies (see above) -- think of the "lock" as meaning "don't edit this!"
   |                             "package.lock.json" file is basically just a *much* longer version of "package.json" (".lock" lists all the dependencies of our dependencies, and so on...)
   |
+  |
   ├── webpack.config.js  ᐸ─── this is where we tell webpack how to process & bundle our source code.
+  |
   |
   |
   ├── .gitignore  ᐸ─── you may already have a "global" .gitignore file, *but* every project should generally have its own here too!
   |                     Make sure to block "dist/" & "node_modules/" to prevent them from uploading to GitHub if you've compiled your code.
   |
+  |
   ├── .babelrc  ᐸ─── our Babel config file -- in general, it's used to make sure newer JS code works on old browsers. We use it to ensure Jest works properly.
   |
   |
+  |
   ├── .eslintrc  ᐸ─── and this is our ESLint config file -- ESLint takes the "pocket lint" out of our code, so to speak, and alerts us if we're writing code poorly.
+  |
   |
   |
   └── README.md  ᐸ─── always :P
