@@ -3,15 +3,14 @@
 
 ---
 
-<detail>
-<summary>
-
 ## Overview
 
-</summary>
-
 - __Node.js__ along with __Node Package Manager__ allows us to easily install and manage JavaScript packages in a project.
-  - __Node.js__  ᐸ─── Node Package Manager needs this installed first
+
+<details>
+<summary><em>Install & update instructions</em></summary>
+
+  - __Node.js__
     - Installing
       - __Mac install:__
         - If you followed the _Learn How to Program_ setup steps, you should have Homebrew installed (if not, check out [this guide](https://treehouse.github.io/installation-guides/mac/homebrew))
@@ -37,8 +36,13 @@
         - Update with: `npm install -g npm` or `npm install -g npm@latest` (for the latest version)
       - __Windows:__
         - This can be tricky! Windows often installs npm in two different locations. [Check out this tool](https://github.com/felixrieseberg/npm-windows-upgrade#older-nodejs-versions) for how best to go about updating!
+</details>
+<br><br>
 
 - __webpack__ is a _module bundler_ that will __concatenate__ and __minify__ our code. This is important because we can keep our code __readable__ (verbose syntax & separated logic/file structure) in our _development_ environment, then have __webpack__ condense everything into minimal (non-human-readable) file structure & code syntax for efficient loading/deployment in _production_ environments.
+<details>
+<summary><em>Install & update instructions</em></summary>
+
   - Installing
   - Updating
   - Plugins:
@@ -46,20 +50,23 @@
     - `webpack-dev-server`: automatically reloads our code in the browser when we make changes to it!
   - Modules:
     - `eslint`: automatically notifies us when our code contains errors or is poorly-written. __It is crucial that this be loaded by webpack first, before our code is minified, so that it reads our human-readable code for errors.__ Counterintuitively, this means listing `eslint` __last__ in our "`rules:`" section of the webpack config file (as these rules are loaded in reverse order).
+</details>
+<br><br>
 
 - __Jest__ allows us to run automated tests to ensure our code is working correctly.
+<details>
+<summary><em>Install & update instructions</em></summary>
 
-</detail>
+
+</details>
+<br><br>
 
 ---
 
-<detail>
-<summary>
 
 ## File Structure
 ##### _Based on information [detailed here](https://www.learnhowtoprogram.com/intermediate-javascript/test-driven-development-and-environments-with-javascript/future-project-structure)_
-
-</summary>
+<details><summary><em>Example file layout with explanations</em></summary>
 
 ```
 repository-name/
@@ -108,7 +115,7 @@ repository-name/
   └── README.md  ᐸ─── always :P
 ```
 
-</detail>
+</details>
 
 
 ---
