@@ -165,7 +165,10 @@ node_modules/
 dist/
 .DS_Store
 ```
+
 9. Fill in starter code for `webpack.config.js` as well:
+    - The `entry: './src/main.js',` line means the `main.js` file is the "entry point" to all your other files -- in other words, the place where `webpack` will begin its recursive search for other files to add to `bundle.js`
+    - You can change `bundle.js` will be placed in a `dist/` directory based on the `filename:` and `path:` lines
 ```
 const path = require('path');
 
@@ -177,8 +180,6 @@ module.exports = {
   }
 };
 ```
-    - The `entry: './src/main.js',` line means _that_ JS file is the "entry point" to all your other files -- in other words, the place where `webpack` will begin its recursive search for other files to add to `bundle.js`
-    - You can change `bundle.js` will be placed in a `dist/` directory based on the `filename:` and `path:` lines
 
 
 </details>
