@@ -136,7 +136,7 @@ repository-name/
 1. Name and create a new repository (`repository-name` will be the example in the code here)
 2. Make your `src/`, `src/css/`, and `__test__` directories: <br>`$ mkdir src 'src/css' '__test__' `
 3. Add your `README.md`, `index.html`, `main.js`, and `styles.css` files: <br>`$ touch README.md src/index.html src/main.js src/css/styles.css`
-4. Add your <em>non-</em>auto-generated configuration files: <br>`$ touch package.json webpack.config.js .gitignore`
+4. Add your <em>non-</em>auto-generated configuration files: <br>`$ touch package.json .gitignore webpack.config.js`
 5. Fill in the starter code for `package.json`: <br>
 ```
 {
@@ -145,6 +145,7 @@ repository-name/
   "description": "",
   "main": "main.js",
   "scripts": {
+    "build": "webpack"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -158,6 +159,25 @@ repository-name/
     - The `--save-dev` flag is important to ensure the __development__ version is installed
     - The `--save-exact` flag ensures that the __exact__ version we specified is installed to our dependencies (in the `node_modules/` folder)
 7. Install `webpack-cli` (the __command line interface__ for webpack)<br>`$ npm install webpack-cli@3.3.8 --save-dev --save-exact`
+8. Fill in some starter code for `.gitignore`, along with any other files you know you want to block!
+```
+node_modules/
+dist/
+.DS_Store
+```
+9. Fill in starter code for `webpack.config.js` as well:
+```
+const path = require('path');
+
+module.exports = {
+  entry: './src/main.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
+};
+```
+
 
 </details>
 
