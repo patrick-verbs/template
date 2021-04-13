@@ -2,7 +2,14 @@
 ##### _From lessons on [LearnHowToProgram.com](https://www.learnhowtoprogram.com/intermediate-javascript/test-driven-development-and-environments-with-javascript)_
 
 ---
+
+<detail>
+<summary>
+
 ## Overview
+
+</summary>
+
 - __Node.js__ along with __Node Package Manager__ allows us to easily install and manage JavaScript packages in a project.
   - __Node.js__  ᐸ─── Node Package Manager needs this installed first
     - Installing
@@ -42,9 +49,18 @@
 
 - __Jest__ allows us to run automated tests to ensure our code is working correctly.
 
+</detail>
+
 ---
+
+<detail>
+<summary>
+
 ## File Structure
 ##### _Based on information [detailed here](https://www.learnhowtoprogram.com/intermediate-javascript/test-driven-development-and-environments-with-javascript/future-project-structure)_
+
+</summary>
+
 ```
 repository-name/
   |   (NOTE: the below folder/file structure is *non*-alphabetized to illustrate the workflow)
@@ -92,7 +108,7 @@ repository-name/
   └── README.md  ᐸ─── always :P
 ```
 
-
+</detail>
 
 
 ---
